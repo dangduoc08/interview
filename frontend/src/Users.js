@@ -1,7 +1,17 @@
+// REQUIREMENT
+/*
+1. FETCH USER FROM BACKEND
+2. TRANSFORM DATA, SPECIFICALLY THE FIRST OBJECT BY RENAME TITLE, FIRST AND LAST
+3. DISPLAY DATA TO THE BROWSWER ACCORDING TO:
+- GENDER
+- NAME
+- LOCATION CITY
+- EMAIL
+- DOB DATE
+*/
+
 function Users() {
-  return (
-    <div>Users</div>
-  )
+  return <div>Users</div>;
 }
 
-export default Users
+export default Users;
