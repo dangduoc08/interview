@@ -2,9 +2,12 @@ const express = require('express')
 const morgan = require('morgan')
 const axios = require('axios')
 const cors = require('cors')
-const { largeArray } = require('./large-array')
 
 const PORT = 4040
+const ARRAY = []
+for (let i = 1; i <= 100000000; i++) {
+  ARRAY.push(1)
+}
 
 const app = express()
 app.use(
@@ -25,21 +28,20 @@ app.get('/users', async (req, res) => {
 
 
 app.get('/sum', (req, res) => {
-  // Sum = 524.994.750.000
+  const now = new Date()
+  // Sum: 10.000.000
 
   try {
-    const now = new Date()
-    const sumResult = largeArray.reduce((acc, cur, index) => {
-      if (index % 50 === 0) {
-        console.log(index)
+    const sum = ARRAY.reduce((acc, cur) => {
+      if (acc % 100 === 0) {
+        console.log(acc)
       }
-
       return acc += cur
     }, 0)
 
     res.json({
-      spent: new Date() - now + 'ms',
-      sum: sumResult
+      spent: ((new Date() - now) / 1000 | 0) + ' seconds',
+      sum
     })
   } catch (err) {
     res.send(err.message)
