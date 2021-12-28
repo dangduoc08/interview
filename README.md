@@ -15,3 +15,4 @@ In the project directory, you can run:
 ## APIs:
 ### *Users*: http://localhost:4040/users
 ### *Sum*: http://localhost:4040/sum
+### *Menus*: http://localhost:4040/menus

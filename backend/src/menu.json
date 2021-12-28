@@ -1,0 +1,87 @@
+[
+  {
+    "id": 0,
+    "title": "PC",
+    "items": [
+      {
+        "id": 0,
+        "title": "Mac"
+      },
+      {
+        "id": 1,
+        "title": "PC"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Laptops & Notebooks",
+    "items": [
+      {
+        "id": 0,
+        "title": "Macs"
+      },
+      {
+        "id": 1,
+        "title": "Windows"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Components",
+    "items": [
+      {
+        "id": 0,
+        "title": "Mice and Trackballs"
+      },
+      {
+        "id": 1,
+        "title": "Monitors"
+      },
+      {
+        "id": 2,
+        "title": "Printers"
+      },
+      {
+        "id": 3,
+        "title": "Scanners"
+      },
+      {
+        "id": 4,
+        "title": "Web Cameras"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tablets"
+  },
+  {
+    "id": 4,
+    "title": "Software",
+    "items": []
+  },
+  {
+    "id": 5,
+    "title": "Phones",
+    "items": [
+      {
+        "id": 0,
+        "title": "Xiaomi"
+      },
+      {
+        "id": 1,
+        "title": "Samsung"
+      },
+      {
+        "id": 2,
+        "title": "Apple"
+      },
+      {
+        "id": 3,
+        "title": "Oppo"
+      }
+    ]
+  }
+]

@@ -2,6 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const axios = require('axios')
 const cors = require('cors')
+const { readFile } = require('fs/promises')
 
 const PORT = 4040
 const ARRAY = []
@@ -47,6 +48,20 @@ app.get('/sum', (req, res) => {
     res.send(err.message)
   }
 })
+
+app.get('/menus', async (req, res) => {
+  try {
+    const rawMenus = await readFile(process.cwd() + '/src/menu.json')
+    const menus = JSON.parse(rawMenus.toString())
+
+    res.json({
+      menus
+    })
+  } catch (err) {
+    res.send(err.message)
+  }
+})
+
 
 
 const server = app.listen(PORT)
