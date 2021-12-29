@@ -20,13 +20,16 @@ app.use(
 
 app.get('/users', async (req, res) => {
   try {
-    const { data } = await axios.get('https://randomuser.me/api/?results=10')
-    res.json(data.results)
+    const rawUsers = await readFile(process.cwd() + '/src/users.json')
+    const users = JSON.parse(rawUsers.toString())
+
+    res.json({
+      users
+    })
   } catch (err) {
     res.send(err.message)
   }
 })
-
 
 app.get('/sum', (req, res) => {
   const now = new Date()
