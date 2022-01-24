@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Users from "./Users";
 import Sum from "./Sum";
 import HookDebug from "./HookDebug";
-import Menu from "./Menu"
+import Menu from "./Menu";
+import Debitcard from "./DebitCard";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -37,6 +38,11 @@ ReactDOM.render(
             Menu
           </Link>
         </li>
+        <li style={{ paddingRight: "1rem" }}>
+          <Link style={{ textDecoration: "none" }} to="/debit">
+            Debit
+          </Link>
+        </li>
       </ul>
     </nav>
     <Routes>
@@ -44,6 +50,7 @@ ReactDOM.render(
       <Route path="/sum" element={<Sum />}></Route>
       <Route path="/hook" element={<HookDebug />}></Route>
       <Route path="/menu" element={<Menu />}></Route>
+      <Route path="/debit" element={<Debitcard />}></Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById("root")
