@@ -18,7 +18,7 @@ function Debitcard() {
     <div>
       {/* CARD FIELD */}
 
-      {/* FROM FIELD */}
+      {/* FORM FIELD */}
 
       {/* MEMBER LIST FIELD */}
     </div>
