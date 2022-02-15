@@ -5,10 +5,12 @@ const cors = require("cors");
 const { readFile } = require("fs/promises");
 
 const PORT = 4040;
-const ARRAY = [];
-for (let i = 1; i <= 100000000; i++) {
-  ARRAY.push(1);
-}
+const ARRAY = [
+  { name: "abc", number: "1111111111111111", month: "12/25", cvv: 123 },
+];
+// for (let i = 1; i <= 100000000; i++) {
+//   ARRAY.push(1);
+// }
 
 const app = express();
 app.use(
@@ -67,9 +69,23 @@ app.get("/menus", async (req, res) => {
 
 // TODO CREATE A NEW CARD
 
+app.post("/cards", async (req, res) => {
+  const card = req.body;
+  ARRAY.push(card);
+  res.status(201).json({
+    card,
+  });
+});
+
 // TODO GET CARD A DETAIL
 
 // TODO GET MEMBER LIST
+
+app.get("/cards", async (req, res) => {
+  res.json({
+    cards: ARRAY,
+  });
+});
 
 const server = app.listen(PORT);
 
