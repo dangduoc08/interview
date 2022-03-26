@@ -65,11 +65,25 @@ app.get("/menus", async (req, res) => {
   }
 });
 
+const array = [];
+
 // TODO CREATE A NEW CARD
+app.post("/debits", async (req, res) => {
+  const data = req.body;
+  array.push(data);
+  res.json({
+    data: array,
+  });
+});
 
 // TODO GET CARD A DETAIL
 
 // TODO GET MEMBER LIST
+app.get("/debits", async (req, res) => {
+  res.json({
+    data: array,
+  });
+});
 
 const server = app.listen(PORT);
 
