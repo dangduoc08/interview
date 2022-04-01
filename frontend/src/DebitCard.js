@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Requirements
 
@@ -13,14 +13,34 @@ import React from "react";
 * Using SCSS, no inline styling
 */
 
+import { CardForm } from './components/CardForm'
+import { CardInfo } from './components/CardInfo'
+import { CardList } from './components/CardList'
+
+import './debitCard.scss'
+
 function Debitcard() {
+  const [member, setMember] = useState({
+    name: 'Mark Henry',
+    date: '12/20',
+    cvc: '123',
+    num: '1234567812345678'
+  })
+
+  const onRowClick = (row) => {
+    setMember(row)
+  }
+
   return (
-    <div>
+    <div className="debit-card-container">
       {/* CARD FIELD */}
+      <CardInfo cardInfo={member} />
 
       {/* FORM FIELD */}
+      <CardForm />
 
       {/* MEMBER LIST FIELD */}
+      <CardList onRowClick={onRowClick} />
     </div>
   );
 }
