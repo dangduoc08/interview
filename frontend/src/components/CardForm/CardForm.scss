@@ -1,0 +1,25 @@
+.card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__input {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 0;
+        border-color: #2c2c2c;
+    }
+
+    &__group {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__btn {
+        background-color: #f8cfcc;
+        border-radius: 0;
+        border-color: #b85450;
+        padding: 10px 40px;
+        width: fit-content;
+    }
+}

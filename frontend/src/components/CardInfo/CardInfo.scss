@@ -1,0 +1,54 @@
+.card-info {
+    position: relative;
+
+    &__btn {
+        background-color: #ffffff;
+        color: #0ad168;
+        width: 100%;
+        max-width: 200px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        padding: 15px 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+
+    &__top {
+        background-color: #0b365a;
+        height: 100px;
+        width: 400px; 
+    }
+
+    &__bottom {
+        z-index: 1;
+        background-color: #06d166;
+        border-radius: 10px;
+        padding: 60px 20px 35px 20px;
+        color: #ffffff;
+        font-size: 18px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: -65px;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    &__number {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+
+    &__date {
+        display: flex;
+        gap: 20px;
+    }
+}
